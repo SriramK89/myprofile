@@ -1,0 +1,89 @@
+img.profile-pic {
+  border-radius: 10px;
+  width: 50px;
+}
+
+img.img-about {
+  width: 100px;
+  margin-left: 130px;
+}
+
+img.hobby {
+  width: 175px;
+}
+
+div.float-left {
+  float: left;
+}
+
+div.float-right {
+  float: right;
+}
+
+div.align-left {
+  text-align: left;
+}
+
+a.home {
+  padding-left: 25px;
+}
+
+a.dark-color {
+  color: #998028;
+}
+
+section.gradient {
+  background: -webkit-linear-gradient(#DEDEDE, #FFFFFF); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#DEDEDE, #FFFFFF); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#DEDEDE, #FFFFFF); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#DEDEDE, #FFFFFF); /* Standard syntax */
+}
+
+aside {
+  background-color: #D4D4D4;
+}
+
+span.bold {
+  font-weight: bold;
+}
+
+span.italics {
+  font-weight: italic;
+}
+
+p.invisible {
+  display: none;
+}
+
+div.top-bot-10 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.self-tw {
+  color: #55ACEE;
+}
+
+.self-fb {
+  color: #47639E;
+}
+
+.self-in {
+  color: #1A85BC;
+}
+
+.self-gh {
+  color: #000000;
+}
+
+i.self-social {
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 50px;
+  padding-top: 5px;
+  width: 50px;
+}
+
+h4.hobby {
+  font-size: 1.8em;
+}
