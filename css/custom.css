@@ -33,14 +33,18 @@ a.dark-color {
 }
 
 .white-camouflage {
-  color: #FFFFFF;
+  color: white;
+}
+
+a.white-camouflage:hover {
+  color: white;
 }
 
 section.gradient {
-  background: -webkit-linear-gradient(#DEDEDE, #FFFFFF); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#DEDEDE, #FFFFFF); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#DEDEDE, #FFFFFF); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#DEDEDE, #FFFFFF); /* Standard syntax */
+  background: -webkit-linear-gradient(#DEDEDE, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#DEDEDE, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#DEDEDE, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#DEDEDE, white); /* Standard syntax */
 }
 
 aside {
@@ -81,7 +85,7 @@ div.top-bot-10 {
 }
 
 i.self-social {
-  background-color: #FFFFFF;
+  background-color: white;
   border-radius: 10px;
   height: 50px;
   padding-top: 5px;
