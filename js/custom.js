@@ -2,6 +2,9 @@ $(function() {
   _cscExtraOpen = false;
   _tcsExtraOpen = false;
   _prjExtraOpen = false;
+  _action = '';
+  _toggleEmail = false;
+  _toggleCV = false;
 
   $('body').ready(function(event) {
     if(window.scrollY > 300) {
@@ -25,6 +28,55 @@ $(function() {
     _hideOrShowInfo(_prjExtraOpen, 'a#projectsextralink', 'div#extraprojectsinfo');
     _prjExtraOpen = !_prjExtraOpen;
     return false;
+  });
+
+  $(document).keypress(function(event){
+    _keyStroke = String.fromCharCode(event.which);
+    switch(_keyStroke) {
+      case 'e':
+        _action = 'e';
+        break;
+      case 'm':
+        if(_action == 'e') {
+          _action = 'em';
+        }
+        break;
+      case 'a':
+        if(_action == 'em') {
+          _action = 'ema';
+        }
+        break;
+      case 'i':
+        if(_action == 'ema') {
+          _action = 'emai';
+        }
+        break;
+      case 'l':
+        if(_action == 'emai') {
+          _action = '';
+          _toggleEmail = true;
+        }
+        break;
+      case 'c':
+        _action = 'c';
+        break;
+      case 'v':
+        if(_action == 'c') {
+          _action = '';
+          _toggleCV = true;
+        }
+        break;
+      default:
+        _action = '';
+    }
+    if(_toggleEmail) {
+      _toggleEmail = false;
+      $('#openEmail').modal('show');
+    }
+    if(_toggleCV) {
+      _toggleCV = false;
+      $('#openCV').modal('show');
+    }
   });
 
   function _hideOrShowInfo(boolean_var, anchor_id, extra_dom_id) {
