@@ -100,3 +100,7 @@ header .intro-text .intro-heading {
   text-transform: none;
   font-size: 5.5em;
 }
+
+a.project-link {
+  color: #486873;
+}
