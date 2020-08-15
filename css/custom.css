@@ -12,6 +12,10 @@ img.hobby {
   width: 175px;
 }
 
+img.img-png {
+  background-color: white;
+}
+
 div.float-left {
   float: left;
 }

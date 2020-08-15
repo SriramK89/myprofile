@@ -1,6 +1,7 @@
 $(function() {
   _cscExtraOpen = false;
   _tcsExtraOpen = false;
+  _softuraExtraOpen = false;
   _prjExtraOpen = false;
   _action = '';
   _toggleEmail = false;
@@ -21,6 +22,12 @@ $(function() {
   $('a#tcsextralink').bind('click', function(event) {
     _hideOrShowInfo(_tcsExtraOpen, 'a#tcsextralink', 'p#extratcsworkinfo');
     _tcsExtraOpen = !_tcsExtraOpen;
+    return false;
+  });
+
+  $('a#softuraextralink').bind('click', function(event) {
+    _hideOrShowInfo(_softuraExtraOpen, 'a#softuraextralink', 'p#extrasofturaworkinfo');
+    _softuraExtraOpen = !_softuraExtraOpen;
     return false;
   });
 
