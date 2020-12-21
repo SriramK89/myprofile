@@ -2,6 +2,7 @@ $(function() {
   _cscExtraOpen = false;
   _tcsExtraOpen = false;
   _softuraExtraOpen = false;
+  _payodaExtraOpen = false;
   _prjExtraOpen = false;
   _action = '';
   _toggleEmail = false;
@@ -28,6 +29,12 @@ $(function() {
   $('a#softuraextralink').bind('click', function(event) {
     _hideOrShowInfo(_softuraExtraOpen, 'a#softuraextralink', 'p#extrasofturaworkinfo');
     _softuraExtraOpen = !_softuraExtraOpen;
+    return false;
+  });
+
+  $('a#payodaextralink').bind('click', function(event) {
+    _hideOrShowInfo(_payodaExtraOpen, 'a#payodaextralink', 'p#extrapayodaworkinfo');
+    _payodaExtraOpen = !_payodaExtraOpen;
     return false;
   });
 
