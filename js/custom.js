@@ -12,36 +12,43 @@ $(function() {
     if(window.scrollY > 300) {
      $('#topNavBar').addClass('navbar-shrink');
     }
+    event.preventDefault();
+    event.stopPropagation();
   });
 
   $('a#cscextralink').bind('click', function(event) {
     _hideOrShowInfo(_cscExtraOpen, 'a#cscextralink', 'p#extracscworkinfo');
     _cscExtraOpen = !_cscExtraOpen;
-    return false;
+    event.preventDefault();
+    event.stopPropagation();
   });
 
   $('a#tcsextralink').bind('click', function(event) {
     _hideOrShowInfo(_tcsExtraOpen, 'a#tcsextralink', 'p#extratcsworkinfo');
     _tcsExtraOpen = !_tcsExtraOpen;
-    return false;
+    event.preventDefault();
+    event.stopPropagation();
   });
 
   $('a#softuraextralink').bind('click', function(event) {
     _hideOrShowInfo(_softuraExtraOpen, 'a#softuraextralink', 'p#extrasofturaworkinfo');
     _softuraExtraOpen = !_softuraExtraOpen;
-    return false;
+    event.preventDefault();
+    event.stopPropagation();
   });
 
   $('a#payodaextralink').bind('click', function(event) {
     _hideOrShowInfo(_payodaExtraOpen, 'a#payodaextralink', 'p#extrapayodaworkinfo');
     _payodaExtraOpen = !_payodaExtraOpen;
-    return false;
+    event.preventDefault();
+    event.stopPropagation();
   });
 
   $('a#projectsextralink').bind('click', function(event) {
     _hideOrShowInfo(_prjExtraOpen, 'a#projectsextralink', 'div#extraprojectsinfo');
     _prjExtraOpen = !_prjExtraOpen;
-    return false;
+    event.preventDefault();
+    event.stopPropagation();
   });
 
   $(document).keypress(function(event){
@@ -91,6 +98,8 @@ $(function() {
       _toggleCV = false;
       $('#openCV').modal('show');
     }
+    event.preventDefault();
+    event.stopPropagation();
   });
 
   function _hideOrShowInfo(boolean_var, anchor_id, extra_dom_id) {
