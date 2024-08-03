@@ -1,3 +1,44 @@
+@media(max-width:767px) {
+  img.profile-pic {
+    width: 40px !important;
+    margin-top: 8px;
+    margin-left: 15px;
+  }
+  
+  .container .intro-text .intro-heading {
+    line-height: 1;
+  }
+}
+
+@media(min-width:768px) {
+  .navbar-default.navbar-shrink .navbar-brand,
+  .navbar-default .navbar-brand {
+    font-size: 1.05em;
+  }
+
+  img.profile-pic {
+    width: 40px !important;
+    margin-top: 5px;
+  }
+}
+
+@media(min-width:992px) {
+  .navbar-default.navbar-shrink .navbar-brand,
+  .navbar-default .navbar-brand {
+    font-size: 2em;
+  }
+
+  img.profile-pic {
+    width: 50px !important;
+    margin-top: 0px;
+  }
+}
+
+#skills .row .timeline-image {
+  display: flex;
+  justify-content: center;
+}
+
 img.profile-pic {
   border-radius: 10px;
   width: 50px;
@@ -5,7 +46,6 @@ img.profile-pic {
 
 img.img-about {
   width: 100px;
-  margin-left: 130px;
 }
 
 img.hobby {
