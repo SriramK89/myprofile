@@ -7,13 +7,14 @@ $(function() {
   _action = '';
   _toggleEmail = false;
   _toggleCV = false;
+  _emailChatMsg = false;
+  _resumeChatMsg = false;
 
   $('body').ready(function(event) {
     if(window.scrollY > 300) {
      $('#topNavBar').addClass('navbar-shrink');
     }
-    event.preventDefault();
-    event.stopPropagation();
+    return false;
   });
 
   $('a#cscextralink').bind('click', function(event) {
@@ -49,6 +50,42 @@ $(function() {
     _prjExtraOpen = !_prjExtraOpen;
     event.preventDefault();
     event.stopPropagation();
+  });
+
+  $('#chat-bubble').bind('click', function(event) {
+    $('#chat-bubble').hide();
+    $('#chat-section').show();
+  });
+
+  $('.chat-close').bind('click', function(event) {
+    $('#chat-bubble').show();
+    $('#chat-section').hide();
+  });
+
+  $('.chat-msg.clickable').bind('click', function(event) {
+    if($(event.target).hasClass('email')) {
+      if(_emailChatMsg) { return; }
+
+      var emailContent = '<div class="chat-msg response-content">My email is ';
+      emailContent += '<a href="mailto:sriramhearing@gmail.com">';
+      emailContent += 'sriramhearing@gmail.com</a>.</div>';
+
+      _emailChatMsg = true;
+
+      $('.chat-body').append(emailContent);
+      $(event.target).removeClass('clickable').addClass('clicked');
+    } else if($(event.target).hasClass('resume')) {
+      if(_resumeChatMsg) { return; }
+
+      var resumeContent = '<div class="chat-msg response-content">';
+      resumeContent += '<a href="SriramResume.pdf" download>';
+      resumeContent += 'Click here</a> to download my resume.</div>';
+
+      _resumeChatMsg = true;
+
+      $('.chat-body').append(resumeContent);
+      $(event.target).removeClass('clickable').addClass('clicked');
+    }
   });
 
   $(document).keypress(function(event){

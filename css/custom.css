@@ -108,3 +108,83 @@ header .intro-text .intro-heading {
 a.project-link {
   color: #486873;
 }
+
+.chat-with-me#chat{
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 5;
+}
+
+.chat-with-me#chat .chat-with-me-bubble#chat-bubble {
+  background: #000;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  padding: 22% 0 0 22%;
+  cursor: pointer;
+}
+
+.chat-with-me#chat .chat-with-me-bubble#chat-bubble i {
+  color: #fed136;
+}
+
+.chat-with-me#chat .chat-with-me-section#chat-section {
+  background: #f7f7f7;
+  border: 1px solid #222;
+  width: 270px;
+  height: 350px;
+  border-radius: 5px;
+}
+
+.chat-with-me#chat .chat-with-me-section#chat-section .chat-head {
+  height: 35px;
+  text-align: center;
+  background: #bbb;
+}
+
+.chat-with-me#chat .chat-with-me-section#chat-section .chat-head .chat-head-text {
+  padding-top: 2%;
+  font-size: 1.1em;
+}
+
+.chat-with-me#chat .chat-with-me-section#chat-section .chat-head .chat-close {
+  position: absolute;
+  right: 8px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.chat-with-me#chat .chat-with-me-section#chat-section .chat-body {
+  height: 90%;
+  overflow-y: auto;
+  background: -webkit-linear-gradient(#DEDEDE, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#DEDEDE, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#DEDEDE, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#DEDEDE, white); /* Standard syntax */
+}
+
+.chat-with-me#chat .chat-with-me-section#chat-section .chat-body .chat-msg {
+  padding: 10px;
+  text-align: right;
+  background: #fff;
+  width: 98%;
+  margin: 2px;
+  display: flex;
+  justify-content: right;
+  border: 1px solid #bbb;
+  border-radius: 15px;
+}
+
+.chat-with-me#chat .chat-with-me-section#chat-section .chat-body .chat-msg.clickable {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.chat-with-me#chat .chat-with-me-section#chat-section .chat-body .chat-msg.response-content {
+  display: block;
+}
+
+.chat-with-me#chat .chat-with-me-section#chat-section .chat-body .chat-msg.clicked {
+  color: #b7b7b7;
+}
