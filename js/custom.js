@@ -78,7 +78,7 @@ $(function() {
       if(_resumeChatMsg) { return; }
 
       var resumeContent = '<div class="chat-msg response-content">';
-      resumeContent += '<a href="SriramResume.pdf" download>';
+      resumeContent += '<a href="SriramResumev9.0.pdf" download>';
       resumeContent += 'Click here</a> to download my resume.</div>';
 
       _resumeChatMsg = true;
